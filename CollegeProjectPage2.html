@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add a new trip expense to group expense settle up.">
+    <title>Add Expense | Group Trip Settle-Up</title>
+    <link rel="stylesheet" href="CollegeProject1.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2226%22>✈️</text></svg>">
+</head>
+<body>
+    <div class="container" style="max-width: 520px;">
+        <header>
+            <div class="brand-badge">✈️ Add Expense Form</div>
+            <h1>Log New Payment</h1>
+            <p class="subtitle">Enter the details of what you paid for your group trip.</p>
+        </header>
+
+        <main>
+            <div class="box single-page-card">
+                <div class="box-header">
+                    <h2>📝 Expense Information</h2>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Expense Description / Name</label>
+                    <input id="name" type="text" placeholder="e.g., Hotel Stay, Dinner, Fuel, Tolls" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Total Amount (₹)</label>
+                    <input id="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="person">Paid By (Who paid?)</label>
+                    <select id="person" aria-label="Select person who paid">
+                        <option>Yash</option>
+                        <option>Rahul</option>
+                        <option>Aman</option>
+                    </select>
+                </div>
+
+                <button id="add-expense-button" type="button" class="btn-primary" style="margin-top: 1rem;">
+                    <span>💾 Save Expense & Settle</span>
+                </button>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="index.html" class="back-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        <span>Back to Dashboard</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Group Trip Settle-Up &bull; Ready for deployment on <a href="https://render.com" target="_blank" rel="noopener">Render</a></p>
+        </footer>
+    </div>
+
+    <!-- Toast notification container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="CollegeProjectJS.js"></script>
+</body>
+</html>
